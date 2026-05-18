@@ -50,7 +50,7 @@ public class SalaController {
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping("/nombre")
+    @GetMapping("nombre")
     public ResponseEntity<List<SalaResponseDTO>> buscarPorNombre(@RequestParam String nombreSala) {
         if (salaService.buscarPorNombreSala(nombreSala).isEmpty()){
             return ResponseEntity.notFound().build();

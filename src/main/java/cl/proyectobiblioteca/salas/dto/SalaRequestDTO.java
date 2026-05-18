@@ -17,5 +17,5 @@ public class SalaRequestDTO {
 
     @NotNull(message = "La capacidad de la sala es obligatoria")
     @Positive (message = "La capacidad debe ser mayor a 0.")
-    private Integer capacidad;
+    private Integer capacidadSala;
 }

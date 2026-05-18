@@ -18,9 +18,9 @@ public class SalaService {
 
     private SalaResponseDTO mapToDTO(Sala sala) {
         return new SalaResponseDTO(
-                sala.getId(),
+                sala.getIdSala(),
                 sala.getNombreSala(),
-                sala.getCapacidad()
+                sala.getCapacidadSala()
         );
     }
 
@@ -43,7 +43,7 @@ public class SalaService {
         Sala sala = new Sala(
                 null,
                 dto.getNombreSala(),
-                dto.getCapacidad()
+                dto.getCapacidadSala()
         );
         return mapToDTO(salaRepository.save(sala));
     }
@@ -53,7 +53,7 @@ public class SalaService {
         return salaRepository.findById(id).map( existente ->
         {
             existente.setNombreSala(dto.getNombreSala());
-            existente.setCapacidad(dto.getCapacidad());
+            existente.setCapacidadSala(dto.getCapacidadSala());
             return mapToDTO(salaRepository.save(existente));
         });
     }

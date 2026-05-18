@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SalaResponseDTO {
-    private Long id;
+    private Long idSala;
     private String nombreSala;
-    private Integer capacidad;
+    private Integer capacidadSala;
 }
